@@ -4,7 +4,7 @@ uvicorn[standard]==0.24.0
 python-multipart==0.0.6
 
 # AI and ML libraries
-anthropic==0.7.8
+anthropic>=0.25.0
 sentence-transformers==2.2.2
 transformers==4.35.2
 

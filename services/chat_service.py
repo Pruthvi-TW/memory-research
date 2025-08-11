@@ -44,6 +44,7 @@ class ChatService:
         system_prompt = self._build_enhanced_system_prompt(context_text)
         
         try:
+            # Use the modern messages API
             response = self.client.messages.create(
                 model="claude-3-5-sonnet-20241022",
                 max_tokens=1500,
