@@ -6,7 +6,7 @@ import pytest
 import asyncio
 from unittest.mock import Mock, AsyncMock, patch
 import aiohttp
-from services.url_content_extractor import URLContentExtractor
+from core.processing.url_content_extractor import URLContentExtractor
 
 
 class TestURLContentExtractor:

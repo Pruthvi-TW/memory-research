@@ -2,8 +2,8 @@ from typing import List, Dict, Any
 import asyncio
 from collections import defaultdict
 
-from vector.vector_service import VectorService
-from graph.context_repository import ContextRepository
+from core.database.vector_service import VectorService
+from core.database.context_repository import ContextRepository
 
 
 class IntegrationService:

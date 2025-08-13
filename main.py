@@ -20,11 +20,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-from vector.vector_service import VectorService
-from graph.neo4j_service import Neo4jService
-from graph.context_repository import ContextRepository
+from core.database.vector_service import VectorService
+from core.database.neo4j_service import Neo4jService
+from core.database.context_repository import ContextRepository
 from services.integration_service import IntegrationService
-from services.chat_service import ChatService
+from core.ai.chat_service import ChatService
 from services.context_service import ContextService
 from models.chat_models import ChatRequest, ChatResponse, InitializeRequest
 from models.dynamic_context_models import (
@@ -35,9 +35,9 @@ from models.dynamic_context_models import (
 )
 
 # Import memory layer
-from memory_layer.mem0_manager import Mem0Manager
-from memory_layer.mem0_context_extractor import Mem0ContextExtractor
-from memory_layer.mem0_integration_service import Mem0IntegrationService
+from core.ai.mem0_manager import Mem0Manager
+from core.ai.mem0_context_extractor import Mem0ContextExtractor
+from core.ai.mem0_integration_service import Mem0IntegrationService
 
 # Import dynamic context services
 from services.dynamic_context_service import DynamicContextService
@@ -89,7 +89,7 @@ chat_service = ChatService()
 context_service = ContextService(integration_service)
 
 # Initialize dynamic context service
-from vector.document_processor import DocumentProcessor
+from core.database.document_processor import DocumentProcessor
 document_processor = DocumentProcessor()
 
 dynamic_context_service = DynamicContextService(
@@ -1041,7 +1041,7 @@ async def serve_react_app(path: str):
     """)
 
 if __name__ == "__main__":
-    print("🚀 Starting Integrated Lending Chatbot with Dynamic Context")
+    print("🚀 Starting FStratum Chatbot with Dynamic Context")
     print("=" * 60)
     
     # Print configuration summary

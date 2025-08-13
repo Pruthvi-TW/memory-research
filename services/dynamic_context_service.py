@@ -11,12 +11,12 @@ from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 import logging
 
-from vector.document_processor import DocumentProcessor
-from vector.vector_service import VectorService
-from memory_layer.mem0_manager import Mem0Manager
-from services.file_upload_handler import FileUploadHandler
-from services.url_content_extractor import URLContentExtractor
-from services.github_repository_processor import GitHubRepositoryProcessor
+from core.database.document_processor import DocumentProcessor
+from core.database.vector_service import VectorService
+from core.ai.mem0_manager import Mem0Manager
+from core.processing.file_upload_handler import FileUploadHandler
+from core.processing.url_content_extractor import URLContentExtractor
+from core.processing.github_repository_processor import GitHubRepositoryProcessor
 from models.dynamic_context_models import ProcessingStatus
 
 logger = logging.getLogger(__name__)

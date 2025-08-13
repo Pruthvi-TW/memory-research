@@ -11,10 +11,8 @@ from concurrent.futures import ThreadPoolExecutor
 from .mem0_manager import Mem0Manager
 
 # Import existing services
-import sys
-sys.path.append('..')
-from vector.vector_service import VectorService
-from graph.context_repository import ContextRepository
+from ..database.vector_service import VectorService
+from ..database.context_repository import ContextRepository
 from services.integration_service import IntegrationService
 
 logger = logging.getLogger(__name__)

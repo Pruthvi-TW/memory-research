@@ -1,1 +1,0 @@
-# Memory layer using mem0 for semantic memory management

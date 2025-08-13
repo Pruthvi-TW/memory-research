@@ -3,7 +3,7 @@ from typing import List, Dict, Any
 from pathlib import Path
 
 from services.integration_service import IntegrationService
-from vector.document_processor import DocumentProcessor
+from core.database.document_processor import DocumentProcessor
 
 
 class ContextService:

@@ -20,7 +20,7 @@ class DatabaseConfig:
     neo4j_password: str = os.getenv("NEO4J_PASSWORD", "password")
     
     # Chroma Vector Database
-    chroma_persist_directory: str = os.getenv("CHROMA_PERSIST_DIR", "./vector/chroma_db")
+    chroma_persist_directory: str = os.getenv("CHROMA_PERSIST_DIR", "./core/database/chroma_db")
     chroma_collection_name: str = os.getenv("CHROMA_COLLECTION", "lending_context")
 
 @dataclass

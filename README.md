@@ -1,23 +1,44 @@
-# Integrated Lending Context Chatbot
+# FStratum Chatbot
 
-A comprehensive chatbot system that combines vector search and graph database technologies to provide context-aware responses about lending processes.
+An AI-powered financial assistant with dynamic context ingestion capabilities. The system combines vector search, graph database relationships, and memory layers to provide intelligent responses based on financial domain knowledge.
 
-## 🏗️ Architecture Overview
+## 🏗️ Architecture
 
-### Enhanced Processing Flow with mem0
 ```
-[User] → [Chatbot Interface] → [mem0 Memory] → [Vector Store] → [Graph DB (Neo4j)] → [LLM (Claude)] → [Response/Code]
-                                     ↓
-                              [Conversation Memory]
+fstratum-chatbot/
+├── core/                          # Core system components
+│   ├── ai/                        # AI and memory services
+│   │   ├── chat_service.py        # Anthropic Claude integration
+│   │   ├── mem0_manager.py        # Memory layer management
+│   │   └── mem0_integration_service.py
+│   ├── database/                  # Data storage services
+│   │   ├── vector_service.py      # ChromaDB vector operations
+│   │   ├── neo4j_service.py       # Graph database operations
+│   │   └── context_repository.py  # Context management
+│   └── processing/                # Content processing
+│       ├── file_upload_handler.py # File processing
+│       ├── url_content_extractor.py # URL content extraction
+│       └── github_repository_processor.py # GitHub integration
+├── services/                      # Business logic services
+├── models/                        # Data models and schemas
+├── frontend/                      # React frontend application
+├── tests/                         # Unit and integration tests
+└── main.py                        # FastAPI application entry point
 ```
 
-### System Components
+### Processing Flow
+```
+[User] → [Frontend] → [Dynamic Context] → [AI Memory] → [Vector DB] → [Graph DB] → [Claude API] → [Response]
+                           ↓
+                    [Files/URLs/GitHub]
+```
 
-1. **Frontend**: React-based chat interface
-2. **mem0 Memory Layer**: Semantic memory for context and conversation storage
-3. **Vector Store**: Chroma DB for semantic document search
-4. **Graph Database**: Neo4j for relationship-based context retrieval
-5. **LLM Integration**: Anthropic Claude for response generation
+### Core Components
+
+1. **AI Layer**: Chat service with Anthropic Claude and memory management
+2. **Database Layer**: Vector search (ChromaDB) and graph relationships (Neo4j)
+3. **Processing Layer**: Dynamic content ingestion from multiple sources
+4. **Frontend**: React-based chat interface with file upload capabilities
 
 ### Enhanced Context Retrieval Strategy with mem0
 

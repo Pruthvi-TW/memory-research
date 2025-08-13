@@ -6,7 +6,7 @@ import pytest
 import asyncio
 from unittest.mock import Mock, AsyncMock, patch
 import aiohttp
-from services.github_repository_processor import GitHubRepositoryProcessor
+from core.processing.github_repository_processor import GitHubRepositoryProcessor
 
 
 class TestGitHubRepositoryProcessor:

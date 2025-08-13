@@ -5,7 +5,7 @@ Unit tests for FileUploadHandler service.
 import pytest
 import asyncio
 from unittest.mock import Mock, patch
-from services.file_upload_handler import FileUploadHandler
+from core.processing.file_upload_handler import FileUploadHandler
 
 
 class TestFileUploadHandler:
